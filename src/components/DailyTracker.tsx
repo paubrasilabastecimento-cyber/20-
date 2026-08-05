@@ -14,15 +14,25 @@ export const DailyTracker: React.FC<DailyTrackerProps> = ({ isOpen, onClose }) =
   const [notes, setNotes] = useState<string>('');
 
   useEffect(() => {
-    const saved = localStorage.getItem('jointbrex_daily_logs');
-    if (saved) {
-      try {
+    try {
+      const saved = localStorage.getItem('jointbrex_daily_logs');
+      if (saved) {
         setLogs(JSON.parse(saved));
-      } catch (e) {
-        // default empty
+      } else {
+        const initialLogs: DailyLogEntry[] = [
+          { id: '1', date: 'Day 1', stiffnessLevel: 8, takenDosage: true, notes: 'Morning knee tightness walking down stairs' },
+          { id: '2', date: 'Day 3', stiffnessLevel: 7, takenDosage: true, notes: 'Slightly better after morning coffee' },
+          { id: '3', date: 'Day 7', stiffnessLevel: 6, takenDosage: true, notes: 'Took 2 miles neighborhood walk' },
+          { id: '4', date: 'Day 14', stiffnessLevel: 4, takenDosage: true, notes: 'Hands feeling flexible for gardening' },
+        ];
+        setLogs(initialLogs);
+        try {
+          localStorage.setItem('jointbrex_daily_logs', JSON.stringify(initialLogs));
+        } catch (e) {
+          // ignore storage quota / permission error
+        }
       }
-    } else {
-      // Initial sample log so chart is never empty
+    } catch (e) {
       const initialLogs: DailyLogEntry[] = [
         { id: '1', date: 'Day 1', stiffnessLevel: 8, takenDosage: true, notes: 'Morning knee tightness walking down stairs' },
         { id: '2', date: 'Day 3', stiffnessLevel: 7, takenDosage: true, notes: 'Slightly better after morning coffee' },
@@ -30,13 +40,16 @@ export const DailyTracker: React.FC<DailyTrackerProps> = ({ isOpen, onClose }) =
         { id: '4', date: 'Day 14', stiffnessLevel: 4, takenDosage: true, notes: 'Hands feeling flexible for gardening' },
       ];
       setLogs(initialLogs);
-      localStorage.setItem('jointbrex_daily_logs', JSON.stringify(initialLogs));
     }
   }, []);
 
   const saveLogsToStorage = (updated: DailyLogEntry[]) => {
     setLogs(updated);
-    localStorage.setItem('jointbrex_daily_logs', JSON.stringify(updated));
+    try {
+      localStorage.setItem('jointbrex_daily_logs', JSON.stringify(updated));
+    } catch (e) {
+      // ignore
+    }
   };
 
   const handleAddLog = (e: React.FormEvent) => {
