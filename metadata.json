@@ -1,0 +1,6 @@
+{
+  "name": "JointBrex - Advanced Joint Health & Mobility",
+  "description": "Official interactive site and store for JointBrex dietary supplement featuring product savings packages, ingredient science, interactive joint mobility quiz, verified reviews, and daily stiffness tracker.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
