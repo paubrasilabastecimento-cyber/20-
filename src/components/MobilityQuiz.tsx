@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { QuizState, ProductPackage } from '../types';
 import { PRODUCT_PACKAGES } from '../data/supplementData';
 import { Zap, CheckCircle2, ArrowRight, RotateCcw, Award, ShieldCheck, Sparkles } from 'lucide-react';
+import bottleMockupImg from '../assets/images/jointbrex_bottle_mockup_1785962311326.jpg';
 
 interface MobilityQuizProps {
   onSelectPackage: (pkg: ProductPackage, directCheckout?: boolean) => void;
@@ -300,7 +301,7 @@ export const MobilityQuiz: React.FC<MobilityQuizProps> = ({ onSelectPackage }) =
               {/* Recommended Package Card Banner */}
               <div className="bg-gradient-to-r from-teal-900 to-slate-900 border-2 border-amber-400/80 rounded-2xl p-6 text-left flex flex-col sm:flex-row items-center gap-6">
                 <img
-                  src="/src/assets/images/jointbrex_bottle_mockup_1785962311326.jpg"
+                  src={bottleMockupImg}
                   alt="JointBrex Bottle"
                   className="w-24 h-24 object-contain rounded-xl shadow-md border border-white/20 shrink-0"
                   referrerPolicy="no-referrer"

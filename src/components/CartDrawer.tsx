@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { CartItem } from '../types';
 import { X, ShoppingBag, Trash2, Plus, Minus, ArrowRight, ShieldCheck, Tag, Sparkles } from 'lucide-react';
+import bottleMockupImg from '../assets/images/jointbrex_bottle_mockup_1785962311326.jpg';
 
 interface CartDrawerProps {
   isOpen: boolean;
@@ -99,7 +100,7 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
                 className="bg-slate-50 p-4 rounded-2xl border border-slate-200 flex gap-4 items-center"
               >
                 <img
-                  src="/src/assets/images/jointbrex_bottle_mockup_1785962311326.jpg"
+                  src={bottleMockupImg}
                   alt="JointBrex Package"
                   className="w-16 h-16 object-contain rounded-lg bg-white p-1 border border-slate-200 shrink-0"
                   referrerPolicy="no-referrer"
