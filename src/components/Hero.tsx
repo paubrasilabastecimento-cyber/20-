@@ -1,5 +1,6 @@
 import React from 'react';
 import { ShieldCheck, Award, Heart, CheckCircle2 } from 'lucide-react';
+import jointbrexGreenBottle from '../assets/images/jointbrex_green_bottle_1785963437678.jpg';
 
 interface HeroProps {
   onOrderNowClick: () => void;
@@ -28,7 +29,7 @@ export const Hero: React.FC<HeroProps> = ({ onOrderNowClick }) => {
                 {/* 3D Bottle Display Image */}
                 <div className="relative z-10 w-full flex justify-center py-4">
                   <img
-                    src="/src/assets/images/jointbrex_green_bottle_1785963437678.jpg"
+                    src={jointbrexGreenBottle}
                     alt="JointBrex Bottle Display"
                     className="h-80 sm:h-96 object-contain rounded-2xl shadow-2xl drop-shadow-[0_25px_25px_rgba(0,0,0,0.5)] transform hover:scale-105 transition-transform duration-500"
                     referrerPolicy="no-referrer"

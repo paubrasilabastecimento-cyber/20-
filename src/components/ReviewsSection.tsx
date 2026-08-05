@@ -1,5 +1,8 @@
 import React from 'react';
 import { Star, Check } from 'lucide-react';
+import doctorJointBrexImg from '../assets/images/doctor_jointbrex_1785963451200.jpg';
+import activeLifestyleImg from '../assets/images/active_lifestyle_hero_1785962324931.jpg';
+import bottleMockupImg from '../assets/images/jointbrex_bottle_mockup_1785962311326.jpg';
 
 export const ReviewsSection: React.FC = () => {
   return (
@@ -24,7 +27,7 @@ export const ReviewsSection: React.FC = () => {
           {/* Senior 1 */}
           <div className="relative rounded-2xl overflow-hidden shadow-lg border-2 border-slate-200 transform -rotate-3 hover:rotate-0 transition-transform duration-300 w-36 sm:w-48">
             <img
-              src="/src/assets/images/doctor_jointbrex_1785963451200.jpg"
+              src={doctorJointBrexImg}
               alt="Satisfied JointBrex User Jessica"
               className="w-full h-44 sm:h-56 object-cover"
               referrerPolicy="no-referrer"
@@ -34,7 +37,7 @@ export const ReviewsSection: React.FC = () => {
           {/* Senior 2 */}
           <div className="relative rounded-2xl overflow-hidden shadow-xl border-2 border-slate-200 transform rotate-1 hover:rotate-0 transition-transform duration-300 w-40 sm:w-52 z-10">
             <img
-              src="/src/assets/images/active_lifestyle_hero_1785962324931.jpg"
+              src={activeLifestyleImg}
               alt="Satisfied Senior Couple Richard & Wife"
               className="w-full h-48 sm:h-60 object-cover"
               referrerPolicy="no-referrer"
@@ -44,7 +47,7 @@ export const ReviewsSection: React.FC = () => {
           {/* Senior 3 */}
           <div className="relative rounded-2xl overflow-hidden shadow-lg border-2 border-slate-200 transform rotate-3 hover:rotate-0 transition-transform duration-300 w-36 sm:w-48">
             <img
-              src="/src/assets/images/jointbrex_bottle_mockup_1785962311326.jpg"
+              src={bottleMockupImg}
               alt="JointBrex Bottle in Daily Routine"
               className="w-full h-44 sm:h-56 object-cover"
               referrerPolicy="no-referrer"
@@ -61,7 +64,7 @@ export const ReviewsSection: React.FC = () => {
             {/* Avatar */}
             <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden shrink-0 border-2 border-emerald-600 shadow-md">
               <img
-                src="/src/assets/images/doctor_jointbrex_1785963451200.jpg"
+                src={doctorJointBrexImg}
                 alt="Jessica Martinez avatar"
                 className="w-full h-full object-cover"
                 referrerPolicy="no-referrer"
@@ -100,7 +103,7 @@ export const ReviewsSection: React.FC = () => {
             {/* Avatar */}
             <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden shrink-0 border-2 border-emerald-600 shadow-md">
               <img
-                src="/src/assets/images/active_lifestyle_hero_1785962324931.jpg"
+                src={activeLifestyleImg}
                 alt="Richard Coleman avatar"
                 className="w-full h-full object-cover"
                 referrerPolicy="no-referrer"

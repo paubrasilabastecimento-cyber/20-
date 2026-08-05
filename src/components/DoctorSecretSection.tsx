@@ -1,4 +1,5 @@
 import React from 'react';
+import doctorJointBrexImg from '../assets/images/doctor_jointbrex_1785963451200.jpg';
 
 export const DoctorSecretSection: React.FC = () => {
   return (
@@ -27,7 +28,7 @@ export const DoctorSecretSection: React.FC = () => {
           <div className="lg:col-span-5">
             <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-slate-200 group">
               <img
-                src="/src/assets/images/doctor_jointbrex_1785963451200.jpg"
+                src={doctorJointBrexImg}
                 alt="Doctor presenting JointBrex supplement bottle"
                 className="w-full h-auto object-cover transform group-hover:scale-102 transition-transform duration-500"
                 referrerPolicy="no-referrer"

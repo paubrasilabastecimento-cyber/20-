@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { PRODUCT_PACKAGES } from '../data/supplementData';
 import { ProductPackage } from '../types';
 import { ShoppingCart, Check } from 'lucide-react';
+import jointbrexGreenBottle from '../assets/images/jointbrex_green_bottle_1785963437678.jpg';
+import bottlesBundleSix from '../assets/images/bottles_bundle_six_1785963474004.jpg';
 
 interface PackagesSectionProps {
   onSelectPackage: (pkg: ProductPackage, directCheckout?: boolean) => void;
@@ -78,7 +80,7 @@ export const PackagesSection: React.FC<PackagesSectionProps> = ({ onSelectPackag
                 {/* Bottle Image */}
                 <div className="h-44 flex items-center justify-center my-4">
                   <img
-                    src="/src/assets/images/jointbrex_green_bottle_1785963437678.jpg"
+                    src={jointbrexGreenBottle}
                     alt="1 Bottle JointBrex"
                     className="h-40 object-contain drop-shadow-md"
                     referrerPolicy="no-referrer"
@@ -169,7 +171,7 @@ export const PackagesSection: React.FC<PackagesSectionProps> = ({ onSelectPackag
                 {/* Bundle Image */}
                 <div className="h-44 flex items-center justify-center my-2">
                   <img
-                    src="/src/assets/images/bottles_bundle_six_1785963474004.jpg"
+                    src={bottlesBundleSix}
                     alt="6 Bottles JointBrex Bundle"
                     className="h-40 object-contain rounded-xl drop-shadow-2xl"
                     referrerPolicy="no-referrer"
@@ -254,7 +256,7 @@ export const PackagesSection: React.FC<PackagesSectionProps> = ({ onSelectPackag
                 {/* Bottle Image */}
                 <div className="h-44 flex items-center justify-center my-2">
                   <img
-                    src="/src/assets/images/bottles_bundle_six_1785963474004.jpg"
+                    src={bottlesBundleSix}
                     alt="3 Bottles JointBrex"
                     className="h-36 object-contain drop-shadow-md"
                     referrerPolicy="no-referrer"
